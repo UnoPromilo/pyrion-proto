@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package discovery;
+package pyrion.v1.discovery;
 
 message DiscoveryParams{
 }
