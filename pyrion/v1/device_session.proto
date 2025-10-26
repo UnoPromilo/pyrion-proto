@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package pyrion.v1.device_session;
+
+import 'pyrion/v1/controller_message.proto';
+import 'pyrion/v1/device_message.proto';
+
+service DeviceSession {
+  rpc Open(stream controller_message.ControllerMessage) returns (stream device_message.DeviceMessage);
+}

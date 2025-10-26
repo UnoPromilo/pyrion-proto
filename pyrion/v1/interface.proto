@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package pyrion.v1.interface;
+
+enum Interface {
+  Virtual = 0;
+  Serial = 1;
+}

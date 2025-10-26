@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package pyrion.v1.controller_message;
+
+import 'pyrion/v1/interface.proto';
+
+message ControllerMessage {
+  oneof payload {
+    Connect connect = 1;
+  }
+}
+
+message Connect {
+  string address = 1;
+  interface.Interface interface = 2;
+}

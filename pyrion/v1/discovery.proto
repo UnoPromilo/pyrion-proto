@@ -2,23 +2,20 @@ syntax = "proto3";
 
 package pyrion.v1.discovery;
 
+import 'pyrion/v1/interface.proto';
+
 message DiscoveryParams{
 }
 
 message DiscoveredDevice{
   string address = 1;
-  Interface interface = 2;
+  interface.Interface interface = 2;
   optional string firmware = 3;
   optional string name = 4;
 }
 
 message ListDiscoveredDevice{
   repeated DiscoveredDevice devices = 1;
-}
-
-enum Interface {
-  Virtual = 0;
-  Serial = 1;
 }
 
 service DeviceDiscovery {
