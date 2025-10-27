@@ -15,7 +15,7 @@ message ConnectionError {
 
 
 message Telemetry{
-  int32 cpu_temp = 1;
+  float cpu_temp = 1;
 }
 
 enum ConnectionErrorType {

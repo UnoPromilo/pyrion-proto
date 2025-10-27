@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package pyrion.v1.device_session;
+package pyrion.v1.session;
 
 import 'pyrion/v1/controller_message.proto';
 import 'pyrion/v1/device_message.proto';

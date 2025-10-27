@@ -6,11 +6,8 @@ import 'pyrion/v1/interface.proto';
 
 message ControllerMessage {
   oneof payload {
-    Connect connect = 1;
+    Stop stop = 1;
   }
 }
 
-message Connect {
-  string address = 1;
-  interface.Interface interface = 2;
-}
+message Stop {}

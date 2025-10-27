@@ -12,6 +12,7 @@ message DiscoveredDevice{
   interface.Interface interface = 2;
   optional string firmware = 3;
   optional string name = 4;
+  string connection_string = 5;
 }
 
 message ListDiscoveredDevice{
