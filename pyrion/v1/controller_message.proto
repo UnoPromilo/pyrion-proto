@@ -4,8 +4,11 @@ package pyrion.v1.controller_message;
 
 message ControllerMessage {
   oneof payload {
-    Stop stop = 1;
+    IntroduceYourself introduceYourself = 1;
+    Stop stop = 2;
   }
 }
+
+message IntroduceYourself {}
 
 message Stop {}

@@ -2,25 +2,20 @@ syntax = "proto3";
 
 package pyrion.v1.device_message;
 
+
 message DeviceMessage {
   oneof payload {
-    ConnectionErrorType connectionError = 1;
+    DeviceIntroduction deviceIntroduction = 1;
     Telemetry telemetry = 2;
   }
 }
 
-message ConnectionError {
-  ConnectionErrorType type = 1;
+message DeviceIntroduction{
+  string firmware = 3;
+  string uid = 5;
 }
-
 
 message Telemetry{
   float cpu_temp = 1;
 }
 
-enum ConnectionErrorType {
-  UNKNOWN = 0;
-  UNKNOWN_DEVICE = 1;
-  DEVICE_IN_USE = 2;
-  NOT_CONNECTED = 3;
-}
