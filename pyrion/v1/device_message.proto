@@ -17,5 +17,11 @@ message DeviceIntroduction{
 
 message Telemetry{
   float cpu_temp = 1;
+  float motor_temp = 2;
+  float v_bus = 3;
+  float power = 4;
+  float current = 5;
+  float duty_cycle = 6;
+  uint64 uptime = 7;
 }
 
