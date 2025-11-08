@@ -17,11 +17,14 @@ message DeviceIntroduction{
 
 message Telemetry{
   float cpu_temp = 1;
-  float motor_temp = 2;
-  float v_bus = 3;
-  float power = 4;
-  float current = 5;
-  float duty_cycle = 6;
-  uint64 uptime = 7;
+  float driver_temp = 2;
+  float motor_temp = 3;
+  float v_bus = 4;
+  float power = 5;
+  float current = 6;
+  float duty_cycle = 7;
+  uint64 uptime = 8;
+  uint32 ongoing_errors = 9;
+  uint32 resolved_errors = 10;
 }
 
