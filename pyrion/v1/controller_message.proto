@@ -6,9 +6,18 @@ message ControllerMessage {
   oneof payload {
     IntroduceYourself introduceYourself = 1;
     Stop stop = 2;
+    WriteFirmwareBlock writeFirmwareBlock = 3;
+    FinalizeFirmwareUpdate finalizeFirmwareUpdate = 4;
   }
 }
 
 message IntroduceYourself {}
 
 message Stop {}
+
+message WriteFirmwareBlock {
+  uint32 offset = 1;
+  repeated uint64 data = 2;
+}
+
+message FinalizeFirmwareUpdate {}

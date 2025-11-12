@@ -7,6 +7,8 @@ message DeviceMessage {
   oneof payload {
     DeviceIntroduction deviceIntroduction = 1;
     Telemetry telemetry = 2;
+    Success success = 3;
+    Fail fail = 4;
   }
 }
 
@@ -28,3 +30,6 @@ message Telemetry{
   uint32 resolved_errors = 10;
 }
 
+message Success {}
+
+message Fail {}
