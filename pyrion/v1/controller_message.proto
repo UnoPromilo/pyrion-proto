@@ -9,6 +9,7 @@ message ControllerMessage {
     WriteFirmwareBlock writeFirmwareBlock = 3;
     FinalizeFirmwareUpdate finalizeFirmwareUpdate = 4;
     ReportErrors reportErrors = 5;
+    ResetErrors resetErrors = 6;
   }
 }
 
@@ -24,3 +25,5 @@ message WriteFirmwareBlock {
 message FinalizeFirmwareUpdate {}
 
 message ReportErrors {}
+
+message ResetErrors {}

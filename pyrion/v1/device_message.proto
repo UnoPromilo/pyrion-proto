@@ -51,6 +51,6 @@ enum ErrorType{
 
 enum ErrorState {
   ERROR_STATE_UNSPECIFIED = 0;
-  ERROR_STATE_ACTIVE = 1;
+  ERROR_STATE_ONGOING = 1;
   ERROR_STATE_RESOLVED = 2;
 }
