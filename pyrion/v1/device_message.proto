@@ -9,7 +9,7 @@ message DeviceMessage {
     Telemetry telemetry = 2;
     Success success = 3;
     Failure failure = 4;
-    ErrorRegister errorRegister = 5;
+    FaultRegister faultRegister = 5;
   }
 }
 
@@ -27,30 +27,30 @@ message Telemetry{
   float current = 6;
   float duty_cycle = 7;
   uint64 uptime = 8;
-  uint32 ongoing_errors = 9;
-  uint32 resolved_errors = 10;
+  uint32 active_faults = 9;
+  uint32 latched_faults = 10;
 }
 
-message ErrorRegister{
-  repeated ErrorEntry errors = 1;
+message FaultRegister{
+  repeated FaultEntry faults = 1;
 }
 
 message Success {}
 
 message Failure {}
 
-message ErrorEntry {
-  ErrorType error = 1;
-  ErrorState state = 2;
+message FaultEntry {
+  FaultType type = 1;
+  FaultState state = 2;
 }
 
-enum ErrorType{
-  ERROR_TYPE_UNSPECIFIED = 0;
+enum FaultType{
+  FAULT_TYPE_UNSPECIFIED = 0;
   ENCODER = 1;
 }
 
-enum ErrorState {
-  ERROR_STATE_UNSPECIFIED = 0;
-  ERROR_STATE_ONGOING = 1;
-  ERROR_STATE_RESOLVED = 2;
+enum FaultState {
+  FAULT_STATE_UNSPECIFIED = 0;
+  ACTIVE = 1;
+  LATCHED = 2;
 }
