@@ -47,6 +47,9 @@ message FaultEntry {
 enum FaultType{
   FAULT_TYPE_UNSPECIFIED = 0;
   ENCODER = 1;
+  ADC_TIMEOUT = 2;
+  INVALID_MEASUREMENT = 3;
+  INVALID_CONTROLLER_OUTPUT = 4;
 }
 
 enum FaultState {
